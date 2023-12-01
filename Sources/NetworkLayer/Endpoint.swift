@@ -20,7 +20,7 @@ public protocol EndPoint {
     
 }
 
-extension EndPoint {
+public extension EndPoint {
     
     var scheme: String {
         return "https"
