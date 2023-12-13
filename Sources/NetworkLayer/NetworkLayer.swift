@@ -19,6 +19,7 @@ public struct NetworkLayer: HTTPClient {
         urlComp.scheme = endPoint.scheme
         urlComp.host = endPoint.host
         urlComp.path = endPoint.path
+        urlComp.queryItems = endPoint.queryItems
 
         guard let url = urlComp.url else {
             return .failure(.invalidURL)

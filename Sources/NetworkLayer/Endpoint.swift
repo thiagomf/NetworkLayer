@@ -9,6 +9,8 @@
 // host: leetcode.com/
 // path: problems/valid-palindrome/
 
+import Foundation
+
 public protocol EndPoint {
     
     var scheme: String { get }
@@ -17,7 +19,7 @@ public protocol EndPoint {
     var method: RequestMethod { get }
     var header: [String : String]? { get }
     var body: [String : String]? { get }
-    
+    var queryItems: [URLQueryItem]? { get }
 }
 
 public extension EndPoint {
